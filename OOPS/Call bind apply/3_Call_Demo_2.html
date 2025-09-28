@@ -1,0 +1,12 @@
+<script>
+  function say(msg) {
+    console.log(msg + "-" + this.name);
+  }
+  say("Hiiiii"); // Hiiiii ''
+
+  let obj1 = { name: "Ashish" };
+  say.call(obj1, "Hello"); // Hello-Ashish
+
+  let obj2 = { name: "Dixit" };
+  say.call(obj2, "Hello"); // Hello-Dixit
+</script>

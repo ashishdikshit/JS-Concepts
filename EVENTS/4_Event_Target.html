@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="f1(event)" id="btn1" title="my Button">BTN-1</button>
+    <script>
+      function f1(event1) {
+        console.log(event1);
+        console.log(event1.target);
+        console.log(event1.target.id);
+        console.log(event1.target.innerText);
+      }
+    </script>
+  </body>
+</html>

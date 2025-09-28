@@ -1,0 +1,16 @@
+<script>
+  let obj1 = {
+    a: 10,
+    b: 20,
+    add: function () {
+      console.log(this.a + this.b); // 30
+    },
+  };
+  obj1.add();
+  let obj2 = { a: 15, b: 35 };
+  //obj2.add(); // error
+  obj1.add.call(obj2); // 50
+
+  let obj3 = { a: 100, b: 200 };
+  obj1.add.call(obj3); // 300
+</script>
