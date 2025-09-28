@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // delete can delete global variables
+      const name = "Sachin Tendulkar";
+      function f1() {
+        console.log("before delete: " + name);
+        delete name;
+        console.log("After delete: " + name);
+      }
+      f1();
+    </script>
+  </body>
+</html>

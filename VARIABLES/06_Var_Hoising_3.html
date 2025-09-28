@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var myvar = 10;
+      function f1() {
+        console.log(myvar); // 10 beacuse it declare globally - No local var myvar inside, so it uses the global one
+        myvar = 20; 
+        console.log(myvar); // 20
+      }
+      f1();
+    </script>
+  </body>
+</html>

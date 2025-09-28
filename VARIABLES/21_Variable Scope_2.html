@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var doesn't support block scope
+      function f1() {
+        if (5 == 5) {
+          // block
+          var a = 10; // function
+          console.log("block ", a); // 10 
+        }
+        console.log("function ", a); // 10 
+      }
+      f1();
+
+      function f2() {
+        if (5 == 5) {
+          // block
+          let b = 20;
+          console.log("block ", b); // // 20 
+        }
+        console.log("function ", b); // error due to block scope
+      }
+      f2();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      f1(); // This is f1....
+      f2(); // This is f2....
+      f3(); // Uncaught TypeError: f3 is not a function
+
+      // function declaration
+      function f1() {
+        console.log("This is f1....");
+      }
+      function f2() {
+        console.log("This is f2....");
+      }
+
+      // function expression
+      var f3 = function () {
+        console.log("This is f3....");
+      };
+      // f3();
+    </script>
+  </body>
+</html>

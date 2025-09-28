@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = 10; // global
+      console.log(a); // yes  // 10
+
+      function f1() { // function scope 
+        let b = 20; 
+        console.log(a); // yes // 10
+        console.log(b); // yes // 20 
+
+        if (true) {
+          let c = 30; // block
+          console.log(a); // yes // 10
+          console.log(b); // yes // 20
+          console.log(c); // yes // 30
+        }
+        console.log(c); // No // error due to the block scope
+      }
+      f1();
+      console.log(b); // No  // error due to the functional  scope
+      console.log(c); // No //  // error due to the block scope
+    </script>
+  </body>
+</html>
